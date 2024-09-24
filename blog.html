@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header class="container mx-auto sticky top-0">
+      <div class="flex justify-around items-center bg-[#F9F7F3] py-7">
+        <div>
+          <button
+            id="home-button"
+            class="font-bold text-2xl px-7 py-3 rounded-lg bg-[#B4F461]"
+          >
+            Home
+          </button>
+        </div>
+        <div class="flex justify-center items-center gap-5">
+          <div>
+            <img src="./assets/logo.png" alt="" />
+          </div>
+          <div>
+            <h3 class="font-bold text-2xl">Donate Bangladesh</h3>
+          </div>
+        </div>
+        <div class="flex justify-center items-center gap-3">
+          <div>
+            <img src="./assets/coin.png" alt="" />
+          </div>
+          <div>
+            <p id="available-balance" class="font-bold text-2xl">5500</p>
+          </div>
+          <div>
+            <p class="font-bold text-2xl">BDT</p>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="container mx-auto">
+        <h1 class="text-4xl font-bold mt-14">Important FAQ : </h1>
+      <div class="collapse collapse-arrow bg-base-200 my-5">
+        <input type="radio" name="my-accordion-2" checked="checked" />
+        <div class="collapse-title text-xl font-medium">
+          What IS The Document Object Model (DOM)?
+        </div>
+        <div class="collapse-content">
+          <p>When a web page is loaded, the browser creates a Document Object Model of the page.</p>
+        </div>
+      </div>
+      <div class="my-5 collapse collapse-arrow bg-base-200">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">
+            how do you select  an element from the dom?
+        </div>
+        <div class="collapse-content">
+          <p>getElementById , getElementsByClassName , querySelector , getElementsByTagName</p>
+        </div>
+      </div>
+      <div class=" my-5 collapse collapse-arrow bg-base-200">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">
+            what is event delegation in the context of the dom and why is it useful?
+        </div>
+        <div class="collapse-content">
+          <p>Event delegation is a technique in JavaScript for handling events at a higher level in the DOM rather than attaching event listeners directly to individual elements.</p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow bg-base-200">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">
+            How do you manipulate an elements attributes and style using the dom?
+        </div>
+        <div class="collapse-content">
+          <p>the onfocus event handler method is used to change the < input > element's style when the user clicks inside it.</p>
+        </div>
+      </div>
+    </main>
+
+    <script src="js/blog.js"></script>
+  </body>
+</html>

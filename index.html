@@ -13,11 +13,11 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <header class="container mx-auto sticky top-0">
+    <header class="container mx-auto sticky top-0 bg-opacity-50 backdrop-blur-lg">
         <!-- Navbar Start-->
-        <div class="flex justify-around items-center bg-[#F9F7F3] py-7">
+        <div class="flex justify-around items-center bg-[#F9F7F3] py-7 backdrop-blur-sm">
             <div>
-                <button class="font-bold text-2xl px-7 py-3 rounded-lg bg-[#B4F461]">Blog</button>
+                <button id="blog-button" class="font-bold text-2xl px-7 py-3 rounded-lg bg-[#B4F461]">Blog</button>
             </div>
             <div class="flex justify-center items-center gap-5">
                 <div>
@@ -43,12 +43,12 @@
 
 
         <!-- Donate & Histry Button Start -->
-        <div class="flex justify-center items-center gap-7 pt-7 pb-3 backdrop-blur-sm">
+        <div class="flex justify-center items-center gap-7 pt-7 pb-3">
             <div>
-                <button class="px-6 py-3 font-bold text-xl text-gray-500 border-2 border-solid order-slate-700 rounded-lg hover:bg-[#B4F461] hover:text-black hover:border-0">Donation</button>
+                <button id="donation-button" class="px-6 py-3 font-bold text-xl text-gray-500 border-2 border-solid rounded-lg bg-[#B4F461] hover:bg-[#B4F461] hover:text-black hover:border-0">Donation</button>
             </div>
             <div>
-                <button class="px-6 py-3 font-bold text-xl text-gray-500 border-2 border-solid order-slate-700 rounded-lg hover:bg-[#B4F461] hover:text-black hover:border-0">History</button>
+                <button id="history-button" class="px-6 py-3 font-bold text-xl text-gray-500 border-2 border-solid order-slate-700 rounded-lg hover:bg-[#B4F461] hover:text-black hover:border-0">History</button>
             </div>
         </div>
         <!-- Donate & Histry Button End -->
@@ -56,7 +56,7 @@
     </header>
 
     <main class="container mx-auto">
-        <section>
+        <section id="donation-section" class="container mx-auto">
 
             <!-- 1st Div -->
             <div class="flex justify-center items-center gap-6 w-4/5 mx-auto p-5 border-2 border-solid order-slate-700 rounded-lg mt-10">
@@ -120,23 +120,22 @@
                     <p class="font-medium text-gray-500">The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.</p>
                     <input id="movement-donate-amount" class="text-gray-500 py-3 px-5 border-2 border-solid order-slate-700 rounded-lg" type="text" name="Amount" id="" placeholder="Write Donation Amount">
                     <button id="donate-movement" class="text-black font-bold bg-[#B4F461] py-3 px-5 rounded-lg">Donate Now</button>
+                    
                 </div>
             </div>
 
         </section>
 
-        <section>
-            <div class=" w-4/5 mx-auto">
+        <section id="history-section" class="hidden container mx-auto mt-10">
+            <div id="history-container" class="space-y-5">
                 
             </div>
         </section>
     </main>
 
-    <footer>
-
-    </footer>
-
     <script src="js/utilities.js"></script>
     <script src="js/donation.js"></script>
+    <script src="js/histry.js"></script>
+    <script src="js/features.js"></script>
   </body>
 </html>
