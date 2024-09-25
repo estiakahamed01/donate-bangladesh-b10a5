@@ -9,6 +9,8 @@ document
     );
     if (isNaN(donateNoakhaliAmount)) {
       alert("Failed!! Please Try Again");
+      document.getElementById('my_modal_1').classList.add('hidden')
+      return 1
     } else {
       const availableBalance = getAvailableBalance("available-balance");
       const availableNoakhali = getAvailableBalance("noakhali-available");
@@ -31,7 +33,7 @@ document
       `
 
       document.getElementById('history-container').appendChild(div)
-      alert("Are You Ready For Donate")
+      document.getElementById('my_modal_1').classList.remove('hidden')
     }
   });
 
@@ -45,6 +47,7 @@ document
     const donateFeniAmount = getInputFieldValueById("feni-donate-amount");
     if (isNaN(donateFeniAmount)) {
       alert("Failed!! Please Try Again");
+      document.getElementById('my_modal_3').classList.add('hidden')
     } else {
       const availableBalance2 = getAvailableBalance("available-balance");
       const availableFeni = getAvailableBalance("feni-available");
@@ -67,8 +70,12 @@ document
       `
 
       document.getElementById('history-container').appendChild(div)
+      document.getElementById('my_modal_3').classList.remove('hidden')
 
-      alert("Are You Ready For Donate")
+      document.getElementById('close2').addEventListener('click',function(){
+        document.getElementById('my_modal_3').close()
+      })
+
     }
   });
 
@@ -87,6 +94,7 @@ document
 
     if (isNaN(donateMovementAmount)) {
       alert("Failed!! Please Try Again");
+      document.getElementById('my_modal_5').classList.add('hidden')
     } else {
       const availableBalance3 = getAvailableBalance("available-balance");
       const availableMovement = getAvailableBalance("movement-available");
@@ -110,7 +118,7 @@ document
 
       document.getElementById('history-container').appendChild(div)
 
-      alert("Are You Ready For Donate")
+      document.getElementById('my_modal_5').classList.remove('hidden')
 
     
     }
